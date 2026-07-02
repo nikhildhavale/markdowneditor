@@ -8,12 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let richTextEditor = RichTextEditor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
+    private func setupUI() {
+        title = "Markdown Editor"
+        view.backgroundColor = .systemBackground
 
+        richTextEditor.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(richTextEditor)
+
+        NSLayoutConstraint.activate([
+            richTextEditor.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            richTextEditor.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            richTextEditor.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            richTextEditor.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+        ])
+
+        richTextEditor.textView.placeholder = "Start typing..."
+    }
 }
 
