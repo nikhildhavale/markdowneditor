@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "RichTextEditor",
             dependencies: [],
-            path: "Sources/RichTextEditor"
+            path: "MarkdownEditor/Sources/RichTextEditor"
         )
     ]
 )

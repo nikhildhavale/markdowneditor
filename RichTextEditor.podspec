@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/nikhildhavale/markdowneditor.git", :tag => "#{spec.version}" }
-  spec.source_files = "Sources/RichTextEditor/**/*.swift"
+  spec.source_files = "MarkdownEditor/Sources/RichTextEditor/**/*.swift"
   spec.exclude_files = "Package.swift"
 
   spec.swift_version = "5.5"
